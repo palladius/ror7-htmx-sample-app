@@ -1,15 +1,10 @@
-# README
+# About ror7-htmx-sample-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this app to play with HTMX.
 
-Things you may want to cover:
-
-* Ruby version: 3.0.4
-* Rails version: 7.x.y
-
+* Ruby version: `3.0.4`
+* Rails version: `7.1.3`
 * System dependencies
-
 * Configuration: Using `tailwind`.
 
 * Database creation
@@ -23,3 +18,22 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## Post install
+
+```bash
+
+########
+# 2024-01-20
+########
+rails new "$1" -j esbuild --css tailwind  # as per DHH video https://www.youtube.com/watch?v=JsNtLiph87Y
+
+bundle add 'htmx-rails'
+# As per https://github.com/rootstrap/htmx-rails?tab=readme-ov-file
+rails g htmx:install
+
+# tail wind
+./bin/bundle add tailwindcss-rails
+./bin/rails tailwindcss:install
+``
