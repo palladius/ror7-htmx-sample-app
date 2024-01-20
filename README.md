@@ -5,11 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.0.4
+* Rails version: 7.x.y
 
 * System dependencies
 
-* Configuration
+* Configuration: Using `tailwind`.
 
 * Database creation
 
