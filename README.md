@@ -28,6 +28,8 @@ I created this app to play with HTMX.
 # 2024-01-20
 ########
 rails new "$1" -j esbuild --css tailwind  # as per DHH video https://www.youtube.com/watch?v=JsNtLiph87Y
+# create Controller from DHH in above video
+rails g controller dhhdemo show
 
 bundle add 'htmx-rails'
 # As per https://github.com/rootstrap/htmx-rails?tab=readme-ov-file
@@ -47,4 +49,8 @@ rails generate rails_live_reload:install
 
 # Firs model
 rails g scaffold post title body:text published:boolean
+
+# Slow controller (slow stuff)
+rails g controller genai index show click unclick sobenme why_sky_blue
+
 ``

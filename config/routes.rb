@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'genai/index'
+  get 'genai/show'
+  get 'genai/click'
+  get 'genai/unclick'
+  get 'genai/sobenme'
+  get 'genai/why_sky_blue'
   resources :posts
   get 'dhhdemo/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
