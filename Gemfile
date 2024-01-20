@@ -65,6 +65,15 @@ group :development do
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
+  # Riccardo
+  gem "rails_live_reload"
+
+  # gem 'guard-livereload', require: false # , '~> 2.5', require: false
+  # gem 'listen'
+  # gem 'guard'
+  # gem 'guard-zeus'
+  # /Riccardo
+
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end

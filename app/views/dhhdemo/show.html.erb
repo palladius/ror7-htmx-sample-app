@@ -1,4 +1,26 @@
 <div>
-  <h1 class="font-bold text-4xl">Dhhdemo#show</h1>
-  <p>Find me in app/views/dhhdemo/show.html.erb</p>
+  <h1 class="font-bold text-4xl font-bold underline">
+    Dhhdemo#show / tailwind
+</h1>
+
+  <p>prova HTMX :) </p>
+
+  <p>copiato da <%= link_to('🔗 htmx-rails', 'https://github.com/rootstrap/htmx-rails') %> </p>
+
+  <!-- have a button POST via AJAX -->
+<button hx-post="/clicked" hx-swap="outerHTML">
+  Click Me
+</button>
+
+<button hx-post="/clicked"
+    hx-trigger="click"
+    hx-target="#parent-div"
+    hx-swap="outerHTML">
+    Click Me 2!
+</button>
+
+
+<a href="/blog">Blog</a>
+
+
 </div>

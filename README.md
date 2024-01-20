@@ -36,4 +36,15 @@ rails g htmx:install
 # tail wind
 ./bin/bundle add tailwindcss-rails
 ./bin/rails tailwindcss:install
+# took me a while but now it works
+
+# https://github.com/railsjazz/rails_live_reload
+bundle add .. (--devlopment?!?)
+# group :development do
+#   gem "rails_live_reload"
+# end
+rails generate rails_live_reload:install
+
+# Firs model
+rails g scaffold post title body:text published:boolean
 ``
