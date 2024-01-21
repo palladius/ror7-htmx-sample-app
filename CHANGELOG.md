@@ -1,3 +1,4 @@
+2024-01-21  v0.5 Finalized move to ruby 3.2.1 (derek wont nudge). Now POST works and also GET CSV!
 2024-01-21  v0.4 I see the light! Code finally works! It wasnt CORS, it was POST not set up in routes. Still isnt.
 2024-01-20  v0.3 lot of useless code :)
 2024-01-20  v0.2 Added controller - tests run perfectly!

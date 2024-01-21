@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'genai/unclick'
   get 'genai/sobenme'
   get 'genai/why_sky_blue'
+
+  post '/genai/why_sky_blue' =>  'genai#why_sky_blue', defaults: {sobenme: "POST /genai/why_sky_blue non so se vada"}
+
   resources :posts
   get 'dhhdemo/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

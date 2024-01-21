@@ -2,7 +2,7 @@
 
 I created this app to play with HTMX.
 
-* Ruby version: `3.0.4`
+* Ruby version: `3.2.1`
 * Rails version: `7.1.3`
 * System dependencies
 * Configuration: Using `tailwind`.
