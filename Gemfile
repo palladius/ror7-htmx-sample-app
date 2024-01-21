@@ -1,10 +1,12 @@
 source "https://rubygems.org"
 
-ruby "3.0.4"
+#ruby "3.0.4" # Mac casa
+ruby "3.2.1"  # Linux lavoro
 
 #########
 # Riccardo
 gem 'htmx-rails'
+gem 'rack-cors', '~> 0.3.1' # to add CORS
 # /Riccardo
 #########
 

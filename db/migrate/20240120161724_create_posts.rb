@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[7.1]
     create_table :posts do |t|
       t.string :title
       t.text :body
-      t.boolean :published, deafult: true
+      t.boolean :published, default: true
 
       t.timestamps
     end
