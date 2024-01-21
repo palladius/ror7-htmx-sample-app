@@ -1,13 +1,13 @@
 
 <br/>
 <footer class="h-10 bottom-0 bg-gray-800">
-    <br/>
     <hr/>
-    <p>
-        Welcome to APPNAME vVERSION <br/>
-        Riccardo CArlesso some rights reserved.
-
+    <p class="bg-gray-800">
+        Welcome to <b><%= APP_NAME %></b>
+        v.<b><%= APP_VERSION %></b>  <br/>
+        <%= APP_PERMISSIONS %>
+        <%= link_to 'Code', APP_CODE, target: '_blank' %>
+        <%= link_to(APP_CODE, target: '_blank') do %>🧑🏻‍💻 code<% end %>
     </p>
-    <div>Same but in div</div>
 
 </footer>

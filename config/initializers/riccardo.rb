@@ -1,13 +1,12 @@
+################
+## CARLESSIAN APP stuff
+################
 
-
-
-
-
-
-
-
-
-
+APP_VERSION = File.read('./VERSION').chomp
+DEFAULT_APP_NAME = 'Ror7 HTMX Sample App'
+APP_NAME = ENV.fetch 'APP_NAME', DEFAULT_APP_NAME
+APP_PERMISSIONS  = 'Riccardo Carlesso Inc. - some rights reserved.'
+APP_CODE = "https://github.com/palladius/ror7-htmx-sample-app"
 
 ################
 ## CORS ISSUE
