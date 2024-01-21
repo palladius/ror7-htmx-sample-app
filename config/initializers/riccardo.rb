@@ -7,6 +7,7 @@ DEFAULT_APP_NAME = 'Ror7 HTMX Sample App'
 APP_NAME = ENV.fetch 'APP_NAME', DEFAULT_APP_NAME
 APP_PERMISSIONS  = 'Riccardo Carlesso Inc. - some rights reserved.'
 APP_CODE = "https://github.com/palladius/ror7-htmx-sample-app"
+LICENSE_URL = "https://github.com/palladius/ror7-htmx-sample-app/blob/main/LICENSE"
 
 ################
 ## CORS ISSUE
