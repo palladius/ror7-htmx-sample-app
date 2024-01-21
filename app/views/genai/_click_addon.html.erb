@@ -7,34 +7,31 @@
 <table border="1">
   <tr>
     <td>
-      📫 POST Buttons
+      📫 POST HTMX Buttons
     </td>
     <td>
       <!-- have a button POST via AJAX -->
-      <button
-        hx-post="/genai/why_sky_blue"
+      <button hx-post="/genai/why_sky_blue"
         hx-swap="outerHTML"
         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      > htmx POST ClickMe 1 (/genai/why_sky_blue) </button>
-      <button
-        hx-post="/genai/why_sky_blue"
+      > POST  (/genai/why_sky_blue)1 </button>
+      <button hx-post="/genai/why_sky_blue"
         hx-swap="outerHTML"
         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      > htmx POST ClickMe 1 (/genai/why_sky_blue) </button>
-      <button
-        hx-post="/click"
+      > POST  (/genai/why_sky_blue)1 </button>
+      <button hx-post="/click"
         hx-trigger="click"
         hx-target="#click2"
         hx-swap="outerHTML"
       class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-      > htmx POST ClickMe 2 (/click)! </button>
+      > POST  (/click)! 2</button>
 
       <button hx-post="/click.json"
-      hx-trigger="click"
-      hx-target="#click2"
-      hx-swap="outerHTML"
-    class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-    > htmx POST ClickMe 2.5 (/click.json)! </button>
+        hx-trigger="click"
+        hx-target="#click2"
+        hx-swap="outerHTML"
+        class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+    > POST /click.json 2.5 </button>
     </td>
   <tr>
     <td>
@@ -90,4 +87,18 @@
 <div id="click2" >id=click2 Click 2 </div>
 
 
+<h2  class="body bg-yellow-500">Random links</h2>
 
+<% links = [
+  'genai/index',
+  'genai/show',
+  'genai/click',
+  'genai/unclick',
+  'genai/sobenme',
+  'genai/why_sky_blue',
+  ]
+
+  links.each { |link| %>
+      <%= link_to(link, "http://localhost:3000/#{link}" ) %> |
+
+<% } %>
