@@ -17,19 +17,7 @@ class GenaiController < ApplicationController
   def click
     @answer = "Yes you GET-clicked me N times"
     @sobenme = params.fetch :sobenme, 'nisba from GET /click' # from config/routes
-    #return
     _common_answer(answer: @answer, sobenme: @sobenme)
-#     respond_to do |format|
-#       format.html {        #redirect_to post_url(@post), notice: "Post was successfully created."
-#         render :html => "<div id='parent-div'>GET /click @answer='#{@answer}'</div>"
-#       }
-#       #format.json { render :show, status: :created, answer: @answer }
-#       format.json {
-#         render :json => {answer: @answer, sobenme: @sobenme }
-# #        render :show, action: 'click', answer: @answer
-#       }
-#     end
-    # maybe return a json?
   end
 
   # this is when i press BUTTON POST /click :)
