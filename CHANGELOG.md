@@ -1,4 +1,5 @@
-2024-01-21  v0.6 [TEST] And we pass the tests again!
+2024-01-22  v0.7 [TEST] Added my first IMAGE inline :)
+2024-01-22  v0.6 [TEST] And we pass the tests again!
 2024-01-21  v0.5 Finalized move to ruby 3.2.1 (derek wont nudge). Now POST works and also GET CSV!
 2024-01-21  v0.4 I see the light! Code finally works! It wasnt CORS, it was POST not set up in routes. Still isnt.
 2024-01-20  v0.3 lot of useless code :)

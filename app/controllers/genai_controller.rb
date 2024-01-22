@@ -2,6 +2,8 @@ class GenaiController < ApplicationController
   # Disable CSRF for POST actions:
   # https://stackoverflow.com/questions/35181340/rails-cant-verify-csrf-token-authenticity-when-making-a-post-request
   protect_from_forgery with: :null_session
+  # https://stackoverflow.com/questions/3751030/rails-3-returning-a-http-406-not-acceptable
+  #respond_to :json, :html, :csv, :png, :jpg
 
   def index
   end
@@ -57,11 +59,11 @@ protected
     @sobenme = sobenme
     calling_method = caller_locations(1,1)[0].label
     my_html_return =  "<div id='parent-div'>[_common_answer] GET /click @answer='#{@answer}' (calling_method='<b>#{calling_method}</b>')</div>"
-
+    silly_image_html ="<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG0UKThAj69nlebRu6zrpdi1XTy2qHtke6GlO9s4Kjg&s' />"
     respond_to do |format|
-      format.csv { render :csv => [[1,2,3]] }
-      format.html { render :html => my_html_return}
-      format.text { render :text => my_html_return}
+      format.html { render :html => (my_html_return + silly_image_html).html_safe
+    }
+      format.text { render :text => my_html_return + silly_image_html}
       format.json { render :json => {
         answer: @answer,
         sobenme: @sobenme ,
@@ -71,6 +73,15 @@ protected
         caller_ruby2: caller_locations(1,1)[0].label, # https://stackoverflow.com/questions/5100299/how-to-get-the-name-of-the-calling-method
         caller_ruby22: calling_method, # https://stackoverflow.com/questions/5100299/how-to-get-the-name-of-the-calling-method
       }
+      # https://stackoverflow.com/questions/13052068/ruby-on-rails-respond-with-and-image-formats
+      # #
+      #Mime::Type.register "image/png", :png
+      #Mime::Type.register "image/jpeg", :jpg
+      ## I recorded ricc_image
+      #format.png { render silly_image_html } # ricc linkedin
+      #format.ricc_image { render silly_image_html } # ricc linkedin
+      #format.jpeg { render "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG0UKThAj69nlebRu6zrpdi1XTy2qHtke6GlO9s4Kjg&s' />" }
+      format.csv { render :csv => [[1,2,3]] }
       }
     end
   end

@@ -29,3 +29,14 @@ Rails.application.config.action_dispatch.default_headers = {
     'Access-Control-Request-Method' => 'GET, PATCH, PUT, POST, OPTIONS, DELETE',
     'Access-Control-Allow-Headers:' => 'Origin, X-Requested-With, Content-Type, Accept'
 }
+
+
+
+###################
+## MIME Types
+###################
+#
+#https://stackoverflow.com/questions/27377646/registering-a-custom-mimetype-in-rails
+
+Mime::Type.register 'application/json', :riccardo_json, %w( text/plain text/x-json application/jsonrequest )
+Mime::Type.register 'image/jpeg', :ricc_image, %w( image/jpeg image/png )

@@ -19,20 +19,30 @@
         hx-swap="outerHTML"
         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       > POST  (/genai/why_sky_blue)1 </button>
+
+      <br/>
+
       <button hx-post="/click"
         hx-trigger="click"
         hx-target="#click2"
         hx-swap="outerHTML"
       class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-      > POST  (/click)! 2</button>
+      > POST  (/click )! #click2 HTML</button>
 
       <button hx-post="/click.json"
         hx-trigger="click"
         hx-target="#click2"
         hx-swap="outerHTML"
         class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-    > POST /click.json 2.5 </button>
-    </td>
+    > POST /click.json #click2 JASONE</button>
+
+    <button hx-post="/click.jpg"
+    hx-trigger="click"
+    hx-target="#click2"
+    hx-swap="outerHTML"
+    class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+    > POST /click.json #click2 JPG/PNG</button>
+</td>
   <tr>
     <td>
       🤔 GET Buttons
@@ -81,10 +91,10 @@
 </div>
 
 <div id="parent-div2" class="parent-div2" >
-  ❌ This is PARENT DIV 2 (should change qwhen you click
+  ❌❌❌ This is PARENT DIV 2 (should change qwhen you click
 </div>
 
-<div id="click2" >id=click2 Click 2 </div>
+<div id="click2" >❌❌❌ id=click2 Click 2 </div>
 
 
 <h2  class="body bg-yellow-500">Random links</h2>

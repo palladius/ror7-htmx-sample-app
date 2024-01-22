@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'click'   =>  'genai#click', defaults: {sobenme: "GET /click"}
   get 'clicked' =>  'genai#click', defaults: {sobenme: "GET /clicked"}
+  # POST /click
   post 'click'   =>  'genai#post_click', defaults: {sobenme: "POST /click"}
   post 'clicked' =>  'genai#post_click', defaults: {sobenme: "POST /clicked"}
   #post 'genai/why_sky_blue'=>  'genai#why_sky_blue', defaults: {sobenme: "POST /genai/why_sky_blue"}
