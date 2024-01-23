@@ -3,17 +3,20 @@ Rails.application.routes.draw do
   get 'genai/show'
   get 'genai/click'
   get 'genai/unclick'
+  get 'genai/slow' # slow stuff
   get 'genai/sobenme'
   get 'genai/why_sky_blue'
 
   # TODO copiali tutti
   post '/genai/why_sky_blue' =>  'genai#why_sky_blue', defaults: {sobenme: "POST /genai/why_sky_blue non so se vada"}
   post 'genai/show'
+  get '/genai' => 'genai#index', defaults: {sobenme: "POST /genai/ too lazy to type INDEX"}
 
   get 'click'   =>  'genai#click', defaults: {sobenme: "GET /click"}
   get 'clicked' =>  'genai#click', defaults: {sobenme: "GET /clicked"}
   # POST /click
   post 'click'   =>  'genai#post_click', defaults: {sobenme: "POST /click"}
+  post 'slow'   =>  'genai#slow', defaults: {sobenme: "POST /genai/slow for a SLOOOOW call"}
   post 'clicked' =>  'genai#post_click', defaults: {sobenme: "POST /clicked"}
   #post 'genai/why_sky_blue'=>  'genai#why_sky_blue', defaults: {sobenme: "POST /genai/why_sky_blue"}
 

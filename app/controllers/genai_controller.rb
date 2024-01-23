@@ -51,6 +51,12 @@ class GenaiController < ApplicationController
     # end
   end
 
+  def slow
+    sleep 1
+    @sobenme = '[slow][after 😴 sleep 1 💤 mimicking a GenAI computation]'
+    @answer = "slow sobenme"
+  end
+
 
 protected
 
@@ -59,10 +65,11 @@ protected
     @sobenme = sobenme
     calling_method = caller_locations(1,1)[0].label
     my_html_return =  "<div id='parent-div'>[_common_answer] GET /click @answer='#{@answer}' (calling_method='<b>#{calling_method}</b>')</div>"
-    silly_image_html ="<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG0UKThAj69nlebRu6zrpdi1XTy2qHtke6GlO9s4Kjg&s' />"
+    # Riccardo linkedin
+    #silly_image_html ="<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG0UKThAj69nlebRu6zrpdi1XTy2qHtke6GlO9s4Kjg&s' />"
+    silly_image_html = ActionController::Base.helpers.image_tag("mouseclick.png", size: "30x30")
     respond_to do |format|
-      format.html { render :html => (my_html_return + silly_image_html).html_safe
-    }
+      format.html { render :html => (my_html_return + silly_image_html).html_safe }
       format.text { render :text => my_html_return + silly_image_html}
       format.json { render :json => {
         answer: @answer,

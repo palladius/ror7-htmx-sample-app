@@ -1,3 +1,4 @@
+2024-01-23  v0.8 [TEST] Imges of Ale and Seby everywhere. Now its from controller, i'd like to publish images from VIEW (TODO)
 2024-01-22  v0.7 [TEST] Added my first IMAGE inline :)
 2024-01-22  v0.6 [TEST] And we pass the tests again!
 2024-01-21  v0.5 Finalized move to ruby 3.2.1 (derek wont nudge). Now POST works and also GET CSV!
