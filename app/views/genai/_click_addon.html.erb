@@ -24,24 +24,24 @@
 
       <button hx-post="/click"
         hx-trigger="click"
-        hx-target="#click2"
+        hx-target="#click-right"
         hx-swap="outerHTML"
       class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-      > POST  (/click )! #click2 HTML</button>
+      > POST  (/click )! #click-right HTML</button>
 
       <button hx-post="/click.json"
         hx-trigger="click"
-        hx-target="#click2"
+        hx-target="#click-right"
         hx-swap="outerHTML"
         class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-    > POST /click.json #click2 JASONE</button>
+    > POST /click.json #click-right JASONE</button>
 
     <button hx-post="/click.jpg"
     hx-trigger="click"
-    hx-target="#click2"
+    hx-target="#click-right"
     hx-swap="outerHTML"
     class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
-    > POST /click.json #click2 JPG/PNG</button>
+    > POST /click.json #click-right JPG/PNG</button>
 </td>
   <tr>
     <td>
@@ -69,7 +69,30 @@
         hx-swap="outerHTML"
         class="focus:outline-none text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-green-900"
         > GET (/genai/click.CSV) 5 </button>
-    </td>
+
+        <br/> HTMX targets:
+        <button hx-get="/genai/click.htmx?sobenme=Bottone-numero-5-HTMX-parent-div&sneaky_id=click-right"
+        hx-trigger="click"
+        hx-target="#click-right"
+        hx-swap="outerHTML"
+        class="focus:outline-none text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-green-900"
+        > GET (/genai/click.htmx) 5 click-right </button>
+
+        <button hx-get="/genai/click.htmx?sobenme=Bottone-numero-5-HTMX-nuovo&pic=sebastian.jpg"
+        hx-trigger="click"
+        hx-target="#click-left"
+        hx-swap="outerHTML"
+        class="focus:outline-none text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-green-900"
+        > GET (/genai/click.htmx) 5 click-left pic=Seby</button>
+
+        <button hx-get="/genai/slow.htmx?sobenme=Bottone-numero-5-HTMX-SLOW&pic=slow.jpg"
+        hx-trigger="click"
+        hx-target="#parent-div"
+        hx-swap="outerHTML"
+        class="focus:outline-none text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-green-900"
+        > GET (/genai/slow.htmx) 5 parent-div pic=slow</button>
+
+      </td>
   </tr>
 </table>
 
@@ -98,12 +121,12 @@
   </tr>
   <tr>
     <td>
-      <div id="parent-div2" class="parent-div2" >
-        ❌id="parent-div2"❌ This is PARENT DIV 2 (should change qwhen you click
+      <div id="click-left" class="click-left" >
+        ❌id="click-left"❌ This is PARENT DIV 2 (should change qwhen you click
       </div>
     </td>
     <td>
-      <div id="click2" >❌id=click2❌  Click 2 </div>
+      <div id="click-right" >❌id=click-right❌  Click 2 </div>
     </td>
   </tr>
 </table>

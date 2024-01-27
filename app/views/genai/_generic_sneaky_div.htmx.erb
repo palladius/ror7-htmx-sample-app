@@ -1,0 +1,27 @@
+<% if @debug %>
+    <hr/>
+    <h2 class="debug" >DEBUG START</h2>
+
+    <b>ciao HTMX</b>
+
+    I'm now creating a DIV with a snkeaky_id ... <br/>
+
+    🎈 @answer = <b><%= @answer %></b> <br/>
+    🎈 @sneaky_id = <b><%= @sneaky_id %></b> <br/>
+    🎈 @sobenme = <b><%= @sobenme %></b> <br/>
+    🎈 @pic = <b><%= @pic %></b> <br/>
+    🎈 @calling_method = <b><%= @calling_method %></b> <br/>
+
+    <h2>DEBUG END</h2>
+    <hr/>
+<% end %>
+<div id="<%= @sneaky_id %>" >INSIDE SNEAKY DIV (can click multiple times) {{{
+    <p>
+    🏬 @sobenme = <b><%= @sobenme %></b>
+    🇮🇪 @sneaky_id = <b><%= @sneaky_id %></b>
+    🏞️ @pic = <b><%= @pic %></b>
+    </p>
+    <%= image_tag(@pic, width: "100") %> }}}
+</div>
+
+<p>Note: 😵‍💫 This is OUTSIDE SNEAKY DIV</p>
